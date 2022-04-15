@@ -39,6 +39,18 @@ public class test {
         String s = "Player1 wins 1 to 0";
         assertEquals(s, card.whoWins(new char[]{'K'}, new char[]{'Q'}));
     }
+    @Test
+    void compare_players_with_two_cards(){
+        var card = new Card();
+        String s = "Player2 wins 1 to 0";
+        assertEquals(s, card.whoWins(new char[]{'2', '2'}, new char[]{'3','3'}));
+    }
 
+    @Test
+    void compare_players_with_two_cards_win_player1(){
+        var card = new Card();
+        String s = "Player1 wins 1 to 0";
+        assertEquals(s, card.whoWins(new char[]{'6', '6'}, new char[]{'3','3'}));
+    }
 
 }
